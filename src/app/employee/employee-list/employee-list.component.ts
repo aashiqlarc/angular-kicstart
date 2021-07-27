@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
+    displayedColumns: string[] = ['position', 'name', 'mobile', 'mail'];
+  dataSource = ELEMENT_DATA;
 
   constructor() { }
 
@@ -13,3 +15,17 @@ export class EmployeeListComponent implements OnInit {
   }
 
 }
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  mobile: number;
+  mail: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {position: 1, name: 'Ellery Holmes', mobile: 989484998, mail: 'Holmes@hmail.com'},
+  {position: 2, name: 'Yvette Carlson', mobile: 787879877, mail: 'Carlson@gmail.com'},
+  {position: 3, name: 'Alec Meyer', mobile:878887887, mail: 'Meyer@gmail.com'},
+
+];
+
