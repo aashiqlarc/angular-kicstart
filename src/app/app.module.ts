@@ -7,10 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http"
 import { ReactiveFormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './interceptor';
+import { CountersComponent } from './counters/counters.component';
+import { CounterOneComponent } from './counters/counter-one/counter-one.component';
+import { CounterTwoComponent } from './counters/counter-two/counter-two.component';
+import { CounterThreeComponent } from './counters/counter-three/counter-three.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountersComponent,
+    CounterOneComponent,
+    CounterTwoComponent,
+    CounterThreeComponent
   ],
   imports: [
     BrowserModule,

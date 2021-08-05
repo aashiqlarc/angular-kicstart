@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.scss']
 })
+
 export class EmployeeListComponent implements OnInit {
+  @Input() item = ''; // decorate the property with @Input()
     displayedColumns: string[] = ['position', 'name', 'mobile', 'mail'];
   dataSource = ELEMENT_DATA;
 
