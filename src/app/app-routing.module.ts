@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistrationComponent } from './registration/registration.component';
+
+
 
 const routes: Routes = [
   {
     path: '',
-    component : RegistrationComponent
-  }
+    loadChildren: () => import('./home/home.module').then(home => home.HomeModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(user => user.UserModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(admin => admin.AdminModule)
+  },
+  
+
 ];
 
 @NgModule({
