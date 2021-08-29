@@ -6,4 +6,12 @@
     <li><a routerLink="/admin/user-list" routerLinkActive="active">Admin</a></li>
   </ul>
 </nav>
+<span>{{title}}</span>
+<ul>
+  <li *ngFor="let make of makes"> 
+    <app-box [make]="make" (notify)="onnotify($event)" ></app-box>
+  </li>
+</ul>
+
+
 

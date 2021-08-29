@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+ 
+  makes = ['a','b','c','d','e'];
+  title!: string ;
   constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void { }
+  onnotify(message : string){
+    this.title= message;
   }
-
 }
